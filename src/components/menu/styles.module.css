@@ -1,0 +1,18 @@
+.container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.container ul {
+  display: flex;
+  align-items: center;
+}
+
+.container li {
+  padding: 0 60px;
+  border-right: 1px solid rgba(0, 0, 0, 0.2);
+}
+.container li:last-child {
+  border-right: none;
+}
