@@ -1,6 +1,10 @@
 .container {
   display: flex;
   padding: 38px 130px;
-
+  width: 100%;
   background-color: #3f5cc0;
+
+  position: fixed;
+  top: 0;
+  left: 0;
 }

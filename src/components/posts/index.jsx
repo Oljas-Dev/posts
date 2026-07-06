@@ -25,11 +25,14 @@ function Posts() {
   }
 
   return (
-    <ul className={styles.container}>
-      {posts.map((post) => {
-        return <li key={post.id}>{post.text}</li>;
-      })}
-    </ul>
+    <div className={styles.container}>
+      <h2>Список постов</h2>
+      <ul>
+        {posts.map((post) => {
+          return <li key={post.id}>{post.text}</li>;
+        })}
+      </ul>
+    </div>
   );
 }
 

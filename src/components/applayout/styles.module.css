@@ -1,5 +1,9 @@
 .container {
-  /* margin: 0 130px; */
+  display: flex;
+  gap: 10%;
   min-height: 100vh;
   background-color: #96dcff;
+  padding: 188px 10%;
+
+  position: relative;
 }
