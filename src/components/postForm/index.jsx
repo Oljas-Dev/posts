@@ -2,14 +2,20 @@ import styles from "./styles.module.css";
 import { useForm } from "react-hook-form";
 
 import avatar from "./../../../public/avatar.svg";
+import axios from "axios";
+import { BASE_URL } from "../posts";
 
 function PostForm() {
-  const { register } = useForm();
+  const { register, handleSubmit } = useForm();
+
+  function createPost(data) {
+    axios.post(`${BASE_URL}/posts`, data);
+  }
 
   return (
     <div className={styles.container}>
       <h2>Написать пост</h2>
-      <form>
+      <form onSubmit={handleSubmit(createPost)}>
         <div className={styles.formContainer}>
           <img src={avatar} alt="avatar" />
           <div>

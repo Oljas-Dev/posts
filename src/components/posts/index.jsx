@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import styles from "./styles.module.css";
 import axios from "axios";
 
-const BASE_URL = "https://6a4be282f5eab0bb6b639e3b.mockapi.io";
+export const BASE_URL = "https://6a4be282f5eab0bb6b639e3b.mockapi.io";
 
 function Posts() {
   const [posts, setPosts] = useState([]);
@@ -18,7 +18,7 @@ function Posts() {
 
   useEffect(() => {
     getPosts();
-  }, []);
+  }, [posts]);
 
   if (posts.length === 0) {
     return <p>There are no posts yet!</p>;
